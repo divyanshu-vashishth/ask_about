@@ -31,7 +31,9 @@ const Navbar: FC<NavbarProps> = ({  }) => {
   <span className="ml-2 text-lg font-semibold text-gray-900 dark:text-gray-100">Ask About</span>
 </Link>
 <nav className="hidden md:flex gap-4">
-    
+{/* <Link className="text-md font-medium text-gray-900 hover:underline dark:text-gray-100" href={'/dashboard'}>
+  Dashboard
+  </Link> */}
   <Link className="text-md font-medium text-gray-900 hover:underline dark:text-gray-100" href={'/about'}>
   About
   </Link>

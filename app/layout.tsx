@@ -4,6 +4,7 @@ import "./globals.css";
 import { ReactQueryClientProvider } from "@/components/ReactQueryClientProvider";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { usePathname } from 'next/navigation'
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -15,20 +16,26 @@ export const metadata = {
   description: "The fastest way to build apps with Next.js and Supabase",
 };
 
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+
   return (
     <ReactQueryClientProvider>
     <html lang="en" className={GeistSans.className}>
       <body className="bg-background text-foreground">
+        
         <Navbar />
+
         <main className="min-h-screen flex flex-col items-center">
           {children}
         </main>
+
         <Footer />
+  
       </body>
     </html>
     </ReactQueryClientProvider>
