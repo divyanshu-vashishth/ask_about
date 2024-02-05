@@ -16,11 +16,13 @@ export const metadata = {
   description: "The fastest way to build apps with Next.js and Supabase",
 };
 
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+
   return (
     <ReactQueryClientProvider>
     <html lang="en" className={GeistSans.className}>
@@ -30,7 +32,9 @@ export default function RootLayout({
           
           {children}
         </main>
+
         <Footer />
+  
       </body>
     </html>
     </ReactQueryClientProvider>
