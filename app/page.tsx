@@ -32,6 +32,12 @@ export default async function Index() {
         <p className="text-lg text-foreground/60">
           To get started, login or sign up.
         </p>
+        <p>
+          Go to `/ssrcountries/id/1` to see the country with server side rendering feature.
+        </p>
+        <p> 
+          Go to `/countries/id/1` to see the country without server side rendering feature or with client side rendering feature.
+        </p>
         </div>
     </div>
   );
