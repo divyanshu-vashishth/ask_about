@@ -1,6 +1,7 @@
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import { ReactQueryClientProvider } from "@/components/ReactQueryClientProvider";
+import Header from "@/components/Header";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -20,8 +21,10 @@ export default function RootLayout({
   return (
     <ReactQueryClientProvider>
     <html lang="en" className={GeistSans.className}>
-      <body className="bg-background text-foreground">
+      <body className="font-sans grainy antialiased bg-white">
+        <Header/>
         <main className="min-h-screen flex flex-col items-center">
+          
           {children}
         </main>
       </body>
